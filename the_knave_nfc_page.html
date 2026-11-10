@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#170d12">
+<title>THE KNAVE — Classified Access</title>
+<style>
+:root{color-scheme:dark;--bg:#100b0f;--panel:#1b1117;--red:#a52b3b;--pale:#ead9d9;--muted:#b89da3;--line:#58313b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 80% 8%,#48202b 0,transparent 34%),radial-gradient(ellipse at 10% 60%,#28131c 0,transparent 38%),var(--bg);color:var(--pale);font-family:Georgia,"Times New Roman",serif;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(135deg,transparent 48%,#d6a5a5 49%,transparent 50%),linear-gradient(45deg,transparent 48%,#d6a5a5 49%,transparent 50%);background-size:44px 44px;mask-image:linear-gradient(to bottom,black,transparent 70%)}
+.wrap{width:min(760px,100%);margin:auto;padding:22px 18px 56px;position:relative}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;font:11px/1.4 Arial,sans-serif;letter-spacing:.22em;color:#d4aeb5}
+.seal{border:1px solid var(--line);border-radius:50%;width:42px;height:42px;display:grid;place-items:center;color:#e5c5c9;font-size:20px}
+.hero{margin:44px 0 28px;min-height:430px;border:1px solid #63313e;border-radius:5px;position:relative;overflow:hidden;background:linear-gradient(150deg,rgba(20,10,15,.12),rgba(12,7,10,.92)),radial-gradient(circle at 72% 28%,#9f3343 0 2%,#5d1c2a 3% 12%,transparent 13%),linear-gradient(130deg,#3b1823,#170e14 58%,#08070a)}
+.hero:before{content:"";position:absolute;width:260px;height:260px;border:1px solid #c16b78;border-radius:50%;right:-20px;top:35px;box-shadow:0 0 0 16px #a84a5a18,0 0 0 34px #a84a5a12,0 0 70px #b63b50aa}
+.hero:after{content:"✦";position:absolute;right:72px;top:110px;font-size:115px;color:#f1c9cb55;text-shadow:0 0 35px #df536b}
+.hero-inner{position:relative;z-index:1;padding:34px 26px;min-height:430px;display:flex;flex-direction:column;justify-content:space-between}
+.eyebrow{font:10px Arial,sans-serif;letter-spacing:.28em;color:#e1aab2}
+h1{font-size:clamp(42px,10vw,76px);line-height:.88;letter-spacing:.03em;margin:30px 0 14px;text-transform:uppercase;color:#f2e5e5;text-shadow:0 3px 25px #000}
+h1 span{display:block;color:#d05b6b;font-size:.48em;letter-spacing:.32em;margin-top:18px}
+.subtitle{font:12px Arial,sans-serif;letter-spacing:.18em;color:#d8b9bd;text-transform:uppercase}
+.hero-bottom{display:flex;justify-content:space-between;align-items:end;gap:12px}
+.stamp{border:1px solid #b85b69;color:#e5b8bf;padding:8px 11px;font:10px Arial,sans-serif;letter-spacing:.16em;transform:rotate(-5deg)}
+.serial{font:10px Arial,sans-serif;letter-spacing:.15em;color:#bda2a8;text-align:right}
+.card{background:linear-gradient(145deg,#21151c,#150e13);border:1px solid var(--line);padding:22px;margin:16px 0;border-radius:4px;box-shadow:0 12px 32px #0005}
+.label{font:10px Arial,sans-serif;letter-spacing:.22em;color:#d36c7a;text-transform:uppercase}
+h2{font-size:25px;font-weight:normal;margin:10px 0 12px}
+p{line-height:1.65;color:#d4c1c4;margin:8px 0}
+.data{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.data div{border-top:1px solid var(--line);padding-top:10px}
+.data small{display:block;font:10px Arial,sans-serif;letter-spacing:.13em;color:#a88c93;margin-bottom:6px}
+.data strong{font-size:15px;font-weight:normal}
+.quote{font-size:21px;line-height:1.4;font-style:italic;color:#f0dfe1;border-left:2px solid #b94b5d;padding:4px 0 4px 17px;margin:22px 0}
+button{border:1px solid #b94b5d;background:linear-gradient(90deg,#6d1d2c,#9f2e40);color:#fff0f1;padding:14px 18px;width:100%;font:11px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;margin-top:12px}
+button:active{transform:scale(.99)}
+.hidden{display:none}
+.reveal{margin-top:14px;padding:14px;border:1px dashed #9e4b5b;color:#f0d5d8;line-height:1.6}
+.footer{text-align:center;margin-top:30px;color:#8f737b;font:9px Arial,sans-serif;letter-spacing:.2em;line-height:1.8}
+@media(min-width:600px){.hero-inner{padding:44px}.wrap{padding-top:30px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="top"><span>FATUI INTELLIGENCE<br>CONFIDENTIAL ARCHIVE</span><span class="seal">✦</span></header>
+  <section class="hero" aria-label="Classified dossier">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">ACCESS RECORD · NO. 04</div>
+        <h1>The Knave<span>Арлекино</span></h1>
+        <div class="subtitle">Дом очага · Четвёртый Предвестник</div>
+      </div>
+      <div class="hero-bottom"><div class="stamp">CLASSIFIED<br>ACCESS GRANTED</div><div class="serial">FONTAINE<br>TSARITSA'S FATUI</div></div>
+    </div>
+  </section>
+  <section class="card">
+    <div class="label">Personnel file / 004</div>
+    <h2>Досье: «Слуга»</h2>
+    <p>Арлекино — Четвёртый Предвестник Фатуи и глава Дома очага. За безупречной выдержкой скрываются холодный расчёт, железная дисциплина и собственный взгляд на долг.</p>
+    <div class="data">
+      <div><small>КОДОВОЕ ИМЯ</small><strong>Слуга / The Knave</strong></div>
+      <div><small>ОРГАНИЗАЦИЯ</small><strong>Фатуи</strong></div>
+      <div><small>НОМЕР</small><strong>04</strong></div>
+      <div><small>СТАТУС</small><strong>Действующий Предвестник</strong></div>
+    </div>
+    <div class="quote">«В этом доме у каждого ребёнка должно быть будущее».</div>
+  </section>
+  <section class="card">
+    <div class="label">Restricted section</div>
+    <h2>Секретное сообщение</h2>
+    <p>Некоторые сведения доступны только обладателю этой карты.</p>
+    <button id="revealBtn" type="button">Открыть запечатанный файл</button>
+    <div id="secret" class="reveal hidden">ДОСТУП ПОДТВЕРЖДЁН.<br>Вы держите в руках не просто карточку. Это ваш личный ключ в архив Дома очага. Берегите его.</div>
+  </section>
+  <footer class="footer">THE HOUSE OF THE HEARTH · INTERNAL USE ONLY<br>UNOFFICIAL FAN-MADE PAGE · NOT AFFILIATED WITH HOYOVERSE</footer>
+</main>
+<script>
+document.getElementById('revealBtn').addEventListener('click',function(){
+ const box=document.getElementById('secret');box.classList.toggle('hidden');
+ this.textContent=box.classList.contains('hidden')?'Открыть запечатанный файл':'Закрыть файл';
+});
+</script>
+</body>
+</html>
